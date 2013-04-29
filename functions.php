@@ -281,11 +281,11 @@ add_filter('smilies_src','custom_smilies_src',1,10);
 /*---------------------获取缩略图---------------------*/
 add_theme_support( 'post-thumbnails' );
 
-function post_thumbnail( $width = 100,$height = 80 ){
+function post_thumbnail( $width = 100,$height = 80 ,$moreInfo = "" ){
     global $post;
     if( has_post_thumbnail() ){    //如果有缩略图，则显示缩略图
         $timthumb_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID),'full');
-        $post_timthumb = '<img src="'.get_bloginfo("template_url").'/timthumb.php?src='.$timthumb_src[0].'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1" alt="'.$post->post_title.'" class="thumb" />';
+        $post_timthumb = '<img src="'.get_bloginfo("template_url").'/timthumb.php?src='.$timthumb_src[0].'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1" alt="'.$post->post_title.'" class="thumb" '.$moreInfo.' />';
         echo $post_timthumb;
     } else {
         $post_timthumb = '';
@@ -305,7 +305,8 @@ function post_thumbnail( $width = 100,$height = 80 ){
             }
             $post_timthumb = '<img src="'.get_bloginfo("template_url").'/timthumb.php?src='.$first_img_pic.'&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1" alt="'.$post->post_title.'" class="thumb" />';
         } else {    //如果日志中没有图片，则显示默认
-            $post_timthumb = '<img src="'.get_bloginfo("template_url").'/images/default.png" alt="'.$post->post_title.'" class="thumb" />';
+             $post_timthumb = '<img src="'.get_bloginfo("template_url").'/timthumb.php?src='.get_bloginfo("template_url").'/images/default.png&amp;h='.$height.'&amp;w='.$width.'&amp;zc=1" alt="'.$post->post_title.'" class="thumb" '.$moreInfo.' />';
+           //'<img src="'.get_bloginfo("template_url").'/images/default.png" alt="'.$post->post_title.'" class="thumb" />';
         }
         echo $post_timthumb;
     }

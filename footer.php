@@ -1,10 +1,7 @@
-</div><!-- END MAIN-->
+</div><!--END BG-->
+
 
 <footer>
-    
-	<div class="links">
-		<?php wp_list_bookmarks( $args ); ?>
-	</div>
 	
 	<div class="copyright">
 		<div id="footer-menu">
@@ -17,8 +14,6 @@
 
 </footer>
 
-</div>
-</div> <!--END BG-->
 
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/js/custom.js"></script>
 <script src="<?php bloginfo('template_url'); ?>/js/go-top.js"></script>

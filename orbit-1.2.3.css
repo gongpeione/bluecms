@@ -1,9 +1,9 @@
 #featured { 
-	width: 1080px;
-	height: 400px;
-	background: #000 url('images/orbit/loading.gif') no-repeat center center;
-	overflow: hidden;
-	margin:20px auto;}
+    width: 1080px;
+    height: 400px;
+    background: #000 url('images/orbit/loading.gif') no-repeat center center;
+    overflow: hidden;
+    margin:20px auto;}
 #featured>img,  
 #featured>div,
 #featured>a { display: none; }
@@ -85,19 +85,22 @@ span.pause.active {
     opacity: 1 }
 .orbit-caption {
     display: none;
-    font-family: "HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif; }
+    font-family: "Microsoft Yahei","HelveticaNeue", "Helvetica-Neue", Helvetica, Arial, sans-serif; 
+    }
+.orbit-caption a{color:#fff;font-size:30px;text-shadow:0 0 2px #FFF}
+.orbit-caption a:hover{color:#DDD}
 .orbit-wrapper .orbit-caption {
     background: #000;
     background: rgba(0,0,0,.6);
     z-index: 1000;
     color: #fff;
-	text-align: center;
-	padding: 7px 0;
+    text-align: center;
+    padding: 20px 0;
     font-size: 13px;
     position: absolute;
     right: 0;
-    bottom: 0;
-    width: 100%; }
+    bottom: 20px;
+    width: 50%; }
 div.slider-nav {
     display: block }
 div.slider-nav span {
@@ -121,7 +124,7 @@ div.slider-nav span.left {
     list-style: none;
     bottom: -40px;
     left: 50%;
-	margin-left: -50px;
+    margin-left: -50px;
     padding: 0; }
 .orbit-bullets li {
     float: left;

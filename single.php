@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<div id = "main-content">
 	<div class="breadcrumbs">
 		<?php if (function_exists('get_breadcrumbs')){get_breadcrumbs(); } ?>
 	</div>
@@ -96,5 +97,9 @@
 
 		<?php endif; ?>
 
-<?php get_sidebar(); ?>			
+
+<?php get_sidebar(); ?>
+
+</div>
+	
 <?php get_footer(); ?>
